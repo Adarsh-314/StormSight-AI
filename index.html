@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>StormShield — AI-Powered Cyclone Intelligence</title>
+<title>StormSight-AI — AI-Powered Cyclone Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -807,7 +807,7 @@ function Sidebar({route, setRoute, collapsed, setCollapsed, mobileOpen, setMobil
         </div>
         {!collapsed && (
           <div>
-            <div className="display" style={{fontSize:16, fontWeight:700, letterSpacing:.2}}>StormShield</div>
+            <div className="display" style={{fontSize:16, fontWeight:700, letterSpacing:.2}}>StormSight-AI</div>
             <div style={{fontSize:10, color:"var(--text-tertiary)"}}>Cyclone Intelligence</div>
           </div>
         )}
@@ -862,7 +862,7 @@ function Sidebar({route, setRoute, collapsed, setCollapsed, mobileOpen, setMobil
     </React.Fragment>
   );
 
-return (
+ return (
   <React.Fragment>
     <aside 
       className="scroll-thin hidden md:flex" 
@@ -935,7 +935,7 @@ function Header({setMobileOpen, alertCount, route}){
           <IconBtn name="menu" size={18}/>
         </button>
         <div>
-          <div className="display" style={{fontSize:17, fontWeight:700}}>StormShield</div>
+          <div className="display" style={{fontSize:17, fontWeight:700}}>StormSight-AI</div>
           <div style={{fontSize:11, color:"var(--text-tertiary)"}}>AI-Powered Cyclone Intelligence · {titleMap[route]}</div>
         </div>
       </div>
@@ -975,7 +975,7 @@ function LandingPage({onEnter}){
         }}>
           <IconBtn name="shield" size={32} strokeWidth={2} fill="#0A0E14"/>
         </div>
-        <div className="display" style={{fontSize:38, fontWeight:700, letterSpacing:.5}}>STORMSHIELD</div>
+        <div className="display" style={{fontSize:38, fontWeight:700, letterSpacing:.5}}>StormSight-AI</div>
         <div style={{fontSize:15, color:"var(--accent-cyan)", marginTop:10, fontWeight:500}}>Multi-Source Satellite AI for Cyclone Intelligence</div>
         <div className="mono" style={{fontSize:13, color:"var(--text-tertiary)", marginTop:16, letterSpacing:1}}>DETECT · CLASSIFY · PREDICT · RESPOND</div>
 
@@ -1016,7 +1016,7 @@ function DashboardPage({storms, alerts, selectedId, setSelectedId, goForecast}){
   const selected = storms.find(s=>s.id===selectedId) || storms[0];
 
   if(storms.length===0){
-    return <EmptyState title="No active storms detected" body="StormShield is continuously monitoring the North Indian Ocean. New disturbances will appear here automatically."/>;
+    return <EmptyState title="No active storms detected" body="StormSight-AI is continuously monitoring the North Indian Ocean. New disturbances will appear here automatically."/>;
   }
 
   return (
@@ -1095,7 +1095,7 @@ function StatCard({label,value,tone,icon}){
    ========================================================================= */
 function LiveStormsPage({storms, selectedId, setSelectedId, goForecast}){
   const selected = storms.find(s=>s.id===selectedId) || storms[0];
-  if(storms.length===0) return <EmptyState title="No active storms detected" body="StormShield is continuously monitoring the North Indian Ocean."/>;
+  if(storms.length===0) return <EmptyState title="No active storms detected" body="StormSight-AI is continuously monitoring the North Indian Ocean."/>;
   return (
     <div style={{display:"flex", flexDirection:"column", gap:16}}>
       <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:10}}>
@@ -1221,7 +1221,7 @@ function SatellitePage(){
         <div style={{padding:"0 20px 20px", fontSize:12.5, color:"var(--text-secondary)"}}>{src.note}</div>
       </Panel>
 
-      <Panel title="Multi-Source Data Fusion" subtitle="StormShield does not rely on imagery alone">
+      <Panel title="Multi-Source Data Fusion" subtitle="StormSight-AI does not rely on imagery alone">
         <FusionDiagram/>
       </Panel>
       <DisclaimerBar/>
@@ -1343,7 +1343,7 @@ function AlertsPage({alerts}){
       </Panel>
 
       {filtered.length===0 ? (
-        <EmptyState icon="alert" title="No alerts in this category" body="StormShield will surface a new AI alert here as soon as a monitored system meets the relevant threshold."/>
+        <EmptyState icon="alert" title="No alerts in this category" body="StormSight-AI will surface a new AI alert here as soon as a monitored system meets the relevant threshold."/>
       ) : (
         <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(320px,1fr))", gap:14}}>
           {filtered.map(a=><AlertRow key={a.id} alert={a}/>)}
@@ -1576,7 +1576,7 @@ function ModelIntelligencePage(){
     <div style={{display:"flex", flexDirection:"column", gap:16}}>
       <div>
         <div className="display" style={{fontSize:20, fontWeight:700}}>Model Intelligence</div>
-        <div style={{fontSize:12.5, color:"var(--text-secondary)", marginTop:2}}>How StormShield's AI pipeline turns raw satellite passes into a forecast</div>
+        <div style={{fontSize:12.5, color:"var(--text-secondary)", marginTop:2}}>How StormSight-AI's AI pipeline turns raw satellite passes into a forecast</div>
       </div>
 
       <div style={{display:"flex", flexDirection:"column", gap:12}}>
@@ -1604,7 +1604,7 @@ function ModelIntelligencePage(){
 
       <Panel title="Model Notes">
         <div style={{fontSize:13, color:"var(--text-secondary)", lineHeight:1.7}}>
-          Accuracy metrics for each model stage will be published here once formal evaluation against the IMD best-track archive is complete. StormShield does not display fabricated performance figures — confidence scores shown elsewhere in the product reflect the model's own per-prediction uncertainty, not a validated accuracy benchmark.
+          Accuracy metrics for each model stage will be published here once formal evaluation against the IMD best-track archive is complete. StormSight-AI does not display fabricated performance figures — confidence scores shown elsewhere in the product reflect the model's own per-prediction uncertainty, not a validated accuracy benchmark.
         </div>
       </Panel>
       <DisclaimerBar/>
@@ -1672,7 +1672,7 @@ function SettingsPage({demoMode, setDemoMode}){
           <div>
             <div style={{fontSize:13.5, fontWeight:600}}>Demo mode</div>
             <div style={{fontSize:12, color:"var(--text-secondary)", marginTop:4, lineHeight:1.5}}>
-              Runs StormShield entirely on synthetic demo data. Disable once live REST endpoints (satellite ingestion, model inference, alerts) are connected.
+              Runs StormSight-AI entirely on synthetic demo data. Disable once live REST endpoints (satellite ingestion, model inference, alerts) are connected.
             </div>
           </div>
           <button onClick={()=>setDemoMode(!demoMode)} style={{
@@ -1710,7 +1710,7 @@ function SettingsPage({demoMode, setDemoMode}){
 
       <Panel title="About">
         <div style={{fontSize:12.5, color:"var(--text-secondary)", lineHeight:1.7}}>
-          StormShield is a decision-support system built for Smart India Hackathon 2026. It is not a replacement for official IMD forecasting or warnings.
+          StormSight-AI is a decision-support system built for Smart India Hackathon 2026. It is not a replacement for official IMD forecasting or warnings.
         </div>
       </Panel>
     </div>
