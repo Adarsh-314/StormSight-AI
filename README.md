@@ -1,4 +1,4 @@
-# StormShield — AI-Powered Cyclone Intelligence Dashboard
+# StormSight — AI-Powered Cyclone Intelligence Dashboard
 
 StormShield is a frontend prototype built for Smart India Hackathon 2026: an AI/ML decision-support dashboard for detecting, classifying, and forecasting tropical cyclones in the North Indian Ocean basin.
 
